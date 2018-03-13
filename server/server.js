@@ -16,12 +16,36 @@ app.use(express.static(publicPath));
 io.on('connection', (socket)=>{
 	console.log('New user connected');
 
+	//creating event
+	// socket.emit('newEmail', {
+	// 	from: 'arvin@example.com',
+	// 	text: 'Hello',
+	// 	createdAt: 123
+	// });
+
+	// socket.on('createEmail', (newEmail)=>{
+	// 	console.log('createEmail',newEmail);
+	// });
+
+
+
+	socket.on('createMessage',(message)=>{
+		socket.emit('newMessage', {
+			from: message.from,
+			text: message.text,
+			createdAt: 123
+		});
+		console.log(message);
+	});
+
+	
+
 	socket.on('disconnect', ()=>{
 		console.log('User disconnected');
 	});
 });
-
-
+// socket.emit create event that client will listen to. THat will be inside connect callback function
+// socket.on event listener from client
 
 server.listen(port, ()=>{
 	console.log(`Server is up on port ${port}`);
