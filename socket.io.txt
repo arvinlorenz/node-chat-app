@@ -1,0 +1,16 @@
+SOCKET.IO
+install and require
+var server = http.createServer(app);
+var io = socketIO(server);
+
+server.listen(port, ()=>{
+	console.log(`Server is up on port ${port}`);
+});
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	var socket = io();
+</script> 
+- add to html file
+- request to server to keep websocket connection open

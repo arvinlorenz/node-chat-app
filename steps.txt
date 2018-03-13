@@ -1,2 +1,24 @@
 npm init
 git init
+make directory and file
+	server/server.js - node.js
+	public/index.html - styles, html, client side js
+
+SETUP SERVER
+install expres
+require express
+create middleware for static public folder
+app.listen
+
+
+SCRIPT in package.json
+start: node server.js
+engine - version of node
+
+
+SETUP FOR GITHUB & HEROKU
+create .gitignore
+const port = process.env.PORT || 3000;
+
+create new repository in github and push initial codes
+create new app in heroku and push
