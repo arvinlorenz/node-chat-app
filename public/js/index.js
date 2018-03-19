@@ -9,10 +9,7 @@ socket.on('connect', function(){
 	// 	text: 'Hi I am a client',
 	// });
 
-	socket.emit('createMessage',{
-		from: 'Andrew',
-		text: 'HELOO EVERYONE'
-	})
+	
 
 });
 
