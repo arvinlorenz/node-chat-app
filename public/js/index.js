@@ -21,7 +21,7 @@ socket.on('connect', function(){
 // });
 
 socket.on('newMessage', function(newMessage){
-	console.log(newMessage);
+	console.log('New Message:',newMessage);
 });
 
 socket.on('disconnect', function(){

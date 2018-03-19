@@ -29,13 +29,16 @@ io.on('connection', (socket)=>{
 
 
 
-	socket.on('createMessage',(message)=>{
-		socket.emit('newMessage', {
+
+
+	//io.emit - emits an event to every single connection
+	socket.on('createMessage',(message)=>{		
+		console.log(message);
+		io.emit('newMessage', {
 			from: message.from,
 			text: message.text,
-			createdAt: 123
-		});
-		console.log(message);
+			createdAt: new Date().getTime()
+		})
 	});
 
 	
