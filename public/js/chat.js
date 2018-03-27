@@ -95,7 +95,6 @@ $('#message-form').on('submit', (e)=>{
 	var params = $.deparam(window.location.search);
 	var messageTextbox = $('[name=message]');
 	socket.emit('createMessage', {
-		from: params.name,
 		text: messageTextbox.val()
 	}, ()=>{
 		messageTextbox.val('');
